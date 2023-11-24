@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="model.Account" table="Account">
+        <id name="id" type="string" column="id">
+            <generator class="assigned"/>
+        </id>
+        <property name="accountNumber" type="date" column="account_number"/>
+        <property name="createdDate" type="date" column="created_date"/>
+        <property name="balance" type="double" column="balance"/>
+        <many-to-one name="client" class="model.Client" column="client_id" not-null="true"/>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-lazy="false">
+ <class name="model.Client" table="Client">
+  <id column="id" name="id" type="int">
+   <generator class="identity"/>
+  </id>
+  <property column="firstName" generated="never" lazy="false" name="firstName"/>
+  <property column="secondName" generated="never" lazy="false" name="secondName"/>
+  <property column="phoneNumber" generated="never" lazy="false" name="phoneNumber"/>
+  <set inverse="true" name="accounts" sort="unsorted">
+   <key column="client_id"/>
+   <one-to-many class="model.Account"/>
+  </set>
+  <set name="operations" table="oprations" inverse="true" cascade="save-update"  fetch="select">
+  	<key column="operation_id" not-null="true" />
+  	<one-to-many class="model.Operation" />
+  </set>
+ </class>
+</hibernate-mapping>
