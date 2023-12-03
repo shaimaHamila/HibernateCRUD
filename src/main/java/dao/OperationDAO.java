@@ -18,6 +18,7 @@ public class OperationDAO {
 		System.out.printf("%n Create new Operation stepp %n");
 		try {
 			transaction = session.beginTransaction();
+			System.out.printf("%n beginTransaction %n");
 			session.save(newOperation);
 			transaction.commit();
 			System.out.printf("%n Created new Operation %n");

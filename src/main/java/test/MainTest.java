@@ -12,10 +12,10 @@ public class MainTest {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Client newClient = new Client("Shai545maa", "Das5jks", "0999999999457");
-		Client newClient2 = new Client("SHihkjTA", "Hamihjkla", "2000000000516583");
-		Client newClient3 = new Client("Papa", "dfgdfgdfgdfgdfe", "9456546864585685");
-		Client newClient4 = new Client("Haya", "dfdfdgdv4e", "0000033685685");
+		Client newClient = new Client("Dhaima", "Das5jks", "0999999999457");
+		Client newClient2 = new Client("Ben salah", "Salah", "55458458");
+		Client newClient3 = new Client("Papa", "Hamila", "98685685");
+		Client newClient4 = new Client("Haya", "hyaaa", "21456859");
 	 
 	    ClientDAO clientDAO = new ClientDAO();
 
@@ -51,9 +51,8 @@ public class MainTest {
 		
 		
 		// Create operation
-		Operation newOperation = new Operation("Withdrawal", 1000);
+		Operation newOperation = new Operation("Withdrawal", 1000, targetClient);
 		OperationDAO operationDAO = new OperationDAO();
-		newOperation.setClient(newClient);
 		operationDAO.createOperation(newOperation);
 		System.out.printf("%n newOperation : %s", newOperation.toString());
 

@@ -7,6 +7,6 @@
 		</id>
 		<property name="designation" type="string" column="designation"/>
 		<property name="amount" type="double" column="amount"/>
-	 	<many-to-one name="client" class="model.Client" column="client_id" />
+	 	<many-to-one name="client" class="model.Client" column="client" />
  	</class>
 </hibernate-mapping>

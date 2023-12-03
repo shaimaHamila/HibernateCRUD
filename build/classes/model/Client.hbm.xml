@@ -14,7 +14,8 @@
    <one-to-many class="model.Account"/>
   </set>
   <set name="operations" table="oprations" inverse="true" cascade="save-update"  fetch="select">
-  	<key column="operation_id" not-null="true" />
+  <!-- I got an error here because the column name wan't name in a correct way in fact it should named the same name of the id in operation table -->
+  	<key column="id" not-null="true" />
   	<one-to-many class="model.Operation" />
   </set>
  </class>

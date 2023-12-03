@@ -7,11 +7,6 @@ public class Operation {
 	private Client client;
 	
 	// Constructors
-	public Operation(String designation, double amount) {
-		super();
-		this.designation = designation;
-		this.amount = amount;
-	}
 	public Operation(String designation, double amount, Client client) {
 		super();
 		this.designation = designation;
